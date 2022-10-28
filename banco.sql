@@ -6,7 +6,7 @@ use bank;
 create table if not exists proprietario(
 idproprietario int(3) primary key auto_increment,
 nome varchar(30) not null,
-email varchar(30) unique,
+email varchar(40) unique,
 endereco varchar(100) not null,
 nascimento varchar(10) not null
 );
@@ -41,10 +41,13 @@ foreign key(id_agencia) references agencia(idagencia)
 );
 
 insert into proprietario values(null, 'Rafaela Gomes', 'RafaGamaral@meucoracao.com', 'chacara santatao', '10/01/2002');
+insert into proprietario values(null, 'Tiago Fernandes', 'TiagoFernandesRibeiro@yahoo.com.br', 'PQ. dos passaros', '15/02/1999');
 
 insert into gerente values(null, 'Roger o Gerente', 1000.00);
+insert into gerente values(null, 'Dj perera', 2000.00);
 
 insert into conta values(null,10000.00,'27/10/2022',1,1);
+insert into conta values(null,10000.00,'28/10/2022',2,2);
 
 insert into agencia values(null,1,'Senac Santo Amaro');
 
